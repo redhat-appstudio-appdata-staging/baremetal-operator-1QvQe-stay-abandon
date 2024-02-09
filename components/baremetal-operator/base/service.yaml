@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: baremetal-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: baremetal-operator
+    app.kubernetes.io/part-of: baremetal-operator
+  name: baremetal-operator
+spec:
+  ports:
+  - port: 58
+    targetPort: 58
+  selector:
+    app.kubernetes.io/instance: baremetal-operator
+status:
+  loadBalancer: {}
